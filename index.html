@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orbital Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Lugrasimo&family=Poppins:wght@200;300&family=Roboto:ital,wght@0,300;1,100&display=swap');
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        
+
+        .sun {
+            width: 100px;
+            height: 100px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate-sun 10s linear infinite;
+            box-shadow: 0 0 25px rgba(253, 162, 101, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: rgb(8, 0, 99);
+            letter-spacing: 2px;
+            font-weight: bolder;
+            font-family: 'Poppins';
+        }
+
+        .both-earth {
+            animation: rotate-both 10s linear infinite;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .both-moon {
+            animation: rotate-both 5s linear infinite;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .earth-orbit {
+            width:280px ;
+            height:280px ;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-top: rgb(255, 255, 255) 5px solid;
+            border-right: rgba(255, 255, 255, 0) 1px solid;
+            border-radius: 50%;
+
+        }
+
+        .earth {
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(rgb(1, 140, 214),green);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -6%;
+            transform: translate(0, -50%);
+
+        }
+
+        .moon-orbit {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-top: rgb(255, 255, 255) 3px solid;
+            border-right: rgba(255, 255, 255, 0) 1px solid;
+            border-radius: 50%;
+            
+        }
+
+        .moon {
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(-60%, 0);
+            box-shadow: 0 0 5px white;
+
+        }
+
+        @keyframes rotate-both {
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sun">JEEBAN</div>
+    <div class="both-earth">
+        <div class="earth-orbit">
+            <div class="earth">
+                <div class="both-moon">
+                    <div class="moon-orbit">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
